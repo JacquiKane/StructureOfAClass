@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Use for IOA -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .spacer {
+            margin-left: 35px;
+        }
+        
+        .classybkg {
+            background: url(images/classyplayertranspar.png) fixed center no-repeat;
+            background-size: cover;
+            z-index: -2;
+        }
+        
+        .boldfont {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 900;
+            font-size: larger;
+        }
+        
+        .codefont {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-weight: bolder;
+            font-size: x-large;
+            color: black;
+        }
+        
+        .buttonsize {
+            width: 180px;
+        }
+        
+        .fontstandout {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container classybkg">
+
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-10 boldfont">
+                <h1 class="boldface">
+                    Structure Of A Class : The SoccerPlayer
+                </h1>
+                <p>
+                    <span class="fontstandout"> A SoccerPlayer model class should </span>represent any soccer player, with instance data of name, age, position and club. The object, instantiated from the class should have callable methods, to access and
+                    change the value of the data-members. Other methods may be necessary to round out the digital model of a soccer player.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <!--  ROW 1 --------------------------------------------------------------------------------------------------->
+            <div class="col-md-2">
+                <section>
+                    <div>
+                        <button class=" btn btn-primary mb-3 buttonsize" data-toggle="collapse" data-target="#classheader" aria-expanded="Link to class header">
+                            Class Header >>
+                        </button>
+                    </div>
+
+                </section>
+            </div>
+            <div class="col-md-7">
+                <div id="classheader" class="collapse mb-3 codefont">
+                    public class SoccerPlayer {
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="classheader" class="collapse mb-3 boldfont">
+                    The
+                    <span class="font-weight-bold">public accessibiliy modifier</span> makes the class visible outside of the module.<br> The class declaration is contained within { ... }
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 1 END ---------------------------------------------------------------------------------------------------------------->
+
+        <div class="row">
+            <!--  ROW 2 --------------------------------------------------------------------------------------------------->
+            <div class="col-md-2">
+                <section>
+                    <div>
+                        <button class=" btn btn-primary mb-3 buttonsize" data-toggle="collapse" data-target="#instancedata" aria-expanded="Link to instance data">
+                            Instance Data >>
+                        </button>
+                    </div>
+
+                </section>
+            </div>
+            <div class="col-md-7">
+                <div id="instancedata" class="collapse mb-3 codefont">
+                    <span class="spacer">private String name;</span><br> <span class="spacer">private double age;</span>
+                    <br> <span class="spacer">private String position;</span><br> <span class="spacer">private String club;</span><br>
+                </div>
+            </div>
+            <div class="col md-3">
+                <div id="instancedata" class="collapse mb-3 boldfont">
+
+                    Access to <b>attributes</b> should be kept internal to the class. Therefore instance variables are designated as private.
+                </div>
+            </div>
+
+
+        </div>
+        <!-- ROW 2 END ---------------------------------------------------------------------------------------------------------------->
+
+        <div class="row">
+            <!--  ROW 3 --------------------------------------------------------------------------------------------------->
+            <div class="col-md-2">
+                <section>
+                    <div>
+                        <button class=" btn btn-primary mb-3 buttonsize" data-toggle="collapse" data-target="#constructors" aria-expanded="Link to constructors">
+                            Constructors >>
+                        </button>
+                    </div>
+
+                </section>
+            </div>
+            <div class="col-md-7">
+                <div id="constructors" class="collapse mb-3 codefont">
+                    <span class="spacer">public SoccerPlayer() {</span><br> <span class="spacer"></span>}</span>
+                    <br>
+                    <br> <span class="spacer">public SoccerPlayer(String name, double age, String position, String club)</span> {<br>
+                    <span class="spacer">&nbsp;this.name = name;</span><br> <span class="spacer">&nbsp;this.age = age;</span><br>
+                    <span class="spacer">&nbsp;this.position = position;</span><br> <span class="spacer">&nbsp;this.club = club;</span><br>
+                    <span class="spacer">}</span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="constructors" class="collapse mb-3 boldfont">
+
+                    <b>Constructors</b> are designated public. Constructors are used to set the initial state of an object, which should include initial values for instance variables. When no constructor is written, Java provides a no-parameter constructor,
+                    and the instance variables are set to default values.
+                </div>
+            </div>
+
+
+        </div>
+        <!-- ROW 3 END ---------------------------------------------------------------------------------------------------------------->
+
+
+        <div class="row">
+            <!--  ROW 4 --------------------------------------------------------------------------------------------------->
+            <div class="col-md-2">
+                <section>
+                    <div>
+                        <button class=" btn btn-primary mb-3 buttonsize" data-toggle="collapse" data-target="#accessors" aria-expanded="Link to accessors">
+                            Accessors >>
+                        </button>
+                    </div>
+
+                </section>
+            </div>
+            <div class="col-md-7">
+                <div id="accessors" class="collapse mb-3 codefont">
+
+                    <span class="spacer"> public String getName()</span> {<br> <span class="spacer"> &nbsp;return name;</span><br>
+                    <span class="spacer">}</span>
+                    <br>
+                    <br> <span class="spacer"> public double getAge() {<br> <span class="spacer"> &nbsp;return age;</span><br>
+                    <span class="spacer">}</span>
+                    <br>
+                    <br> <span class="spacer"> public String getPosition() {<br> <span class="spacer"> &nbsp;return position;</span><br>
+                    <span class="spacer">}</span>
+                    <br>
+                    <br> <span class="spacer"> public String getClub() {<br><span class="spacer">  &nbsp;return club;</span><br> <span class="spacer">}</span>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="accessors" class="collapse mb-3 boldfont">
+                    An <b>accessor method</b> allows other objects to obtain the value of instance variables or static variables. The return keyword is used to return the flow of control to the caller. Note that the return type or class mirrors the type
+                    of the returned data, which is the value of the instance data member.
+                </div>
+            </div>
+
+
+        </div>
+        <!-- ROW 4 END ---------------------------------------------------------------------------------------------------------------->
+
+
+        <div class="row">
+            <!--  ROW 5 --------------------------------------------------------------------------------------------------->
+            <div class="col-md-2">
+                <section>
+                    <div>
+                        <button class=" btn btn-primary mb-3 buttonsize" data-toggle="collapse" data-target="#mutators" aria-expanded="Link to mutators">
+                            Mutators >>
+                        </button>
+                    </div>
+
+                </section>
+            </div>
+            <div class="col-md-7">
+                <div id="mutators" class="collapse mb-3 codefont">
+
+                    <span class="spacer">public void setName(String playerName)</span> {<br> <span class="spacer">&nbsp;name = playerName;</span><br>
+                    <span class="spacer">}</span>
+                    <br>
+                    <br> <span class="spacer">public void setAge(double playerAge) </span>{ {<br> <span class="spacer">&nbsp;age = playerAge;</span><br>
+                    <span class="spacer">}</span>
+                    <br>
+                    <br> <span class="spacer">public void setClub(String playerClub) {</span><br> <span class="spacer">&nbsp;club = playerClub;</span><br>
+                    <span class="spacer">}</span>
+                    <br>
+                    <br> <span class="spacer">public void setPosition(String playerPosition) {</span><br><span class="spacer">&nbsp;position = playerPosition;
+
+                    </span><br>
+                    <span class="spacer"> }</span>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="mutators" class="collapse mb-3 boldfont">
+                    A <b>mutator method</b> is often a void method that changes the value of an instance variable or a static variable.
+                </div>
+            </div>
+
+
+        </div>
+        <!-- ROW 5 END ---------------------------------------------------------------------------------------------------------------->
+
+
+
+        <div class="row">
+            <!--  ROW 6 --------------------------------------------------------------------------------------------------->
+            <div class="col-md-2">
+                <section>
+                    <div>
+                        <button class=" btn btn-primary mb-3 buttonsize" data-toggle="collapse" data-target="#othermethods" aria-expanded="Link to mutators">
+                            Other Methods >>
+                        </button>
+                    </div>
+
+                </section>
+            </div>
+            <div class="col-md-7">
+                <div id="othermethods" class="collapse mb-3 codefont">
+
+                    <span class="spacer">public void nextGame() {</span><br>
+                    <span class="spacer"></span>&nbsp;System.out.println("Give me a minute to access my Soccer Player Database....");<br>
+                    <span class="spacer">}</span>
+                    <br>
+                    <br> <span class="spacer">public double distanceToTopOfGoal(double distanceFromGoal ) {</span><br>
+                    <span class="spacer">&nbsp;double distance = Math.sqrt(Math.pow(distanceFromGoal, 2)</span> + <br> Math.pow(8-0.3,2));
+                    <br> <span class="spacer">&nbsp;return distance;</span><br>
+                    <span class="spacer">}</span>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="othermethods" class="collapse mb-3 boldfont">
+                    Non-void methods pass back data to the caller, void methods do not. Overloaded methods have the same method signature, but a different number of parameters.
+                </div>
+            </div>
+
+
+        </div>
+        <!-- ROW 6 END ---------------------------------------------------------------------------------------------------------------->
+
+        <div class="row">
+            <!--  ROW 6 --------------------------------------------------------------------------------------------------->
+            <div class="col-md-2">
+                <section>
+                </section>
+            </div>
+            <div class="col-md-7">
+                <div id="classheader" class="collapse mb-3 codefont">
+                    } //end class definition
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <section>
+
+                </section>
+            </div>
+
+        </div>
+        <!-- row end -->
+
+    </div>
+    <!-- End main container -->
+    <!-- container-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
